@@ -4,6 +4,17 @@ commonly use machine learning library for use in day to day analysis and model b
 
 ### Classification
 
+Titanic dataset , to predict the survivability of passenger with different attribute.
+
+In this simple example , DALEX has been used to show the model explainer for black box like multi-layer perceptron.
+
+Model explainer to explain the feature of why this value is being propose.
+
+![explainer](assets/TitanicModelExplainer.png)
+
+
+Below is the whatif we would want to flip the survibility of John, which feature adjustment could make the highest impact.
+![whatif](assets/CeterisParibusProfiles.png)
 
 ### Regression 
 * Xgboost regressor with model explainer for california housing price data
