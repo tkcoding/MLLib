@@ -10,7 +10,7 @@ In this simple example , DALEX has been used to show the model explainer for bla
 
 Model explainer to explain the feature of why this value is being propose.
 
-![explainer](assets/TitanicModelExplainer.png)
+![DalexModelExplainer](assets/TitanicModelExplainer.png)
 
 
 Below is the whatif we would want to flip the survibility of John, which feature adjustment could make the highest impact.
