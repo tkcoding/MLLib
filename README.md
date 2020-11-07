@@ -26,6 +26,12 @@ Below is the whatif we would want to flip the survibility of John, which feature
 ### Reinforcement Learning
 * PONG REINFORCE BASE CODE for pong game
 
+__Monte-Carlo Tree Search__
+
+Training an agent using the concept of what Alpha-go has deployed on Tic-Tac-Toe.
+Can you beat the agent in Tic-Tac-Toe game when it has completely master the game ? Please try out MCTS method.
+
+
 ### Time Series Analysis
 * Air passenger base code for analysis using:
 - Post processing of air passenger trend into stationarity
