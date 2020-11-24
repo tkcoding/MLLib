@@ -17,7 +17,7 @@ Below is the whatif we would want to flip the survibility of John, which feature
 
 ![CeterisParibusProfiles](assets/CeterisParibusProfiles.png)
 
-### Regression 
+### Regression
 * Xgboost regressor with model explainer for california housing price data
 * Added SHAP and LIME different model explainer as part of understanding for each data points, feature that has been used for prediction and value
 
@@ -35,8 +35,12 @@ Can you beat the agent in Tic-Tac-Toe game when it has completely master the gam
 ### Time Series Analysis
 * Air passenger base code for analysis using:
 - Post processing of air passenger trend into stationarity
-- ETS (Error Trend Seasonal) decomposition 
-- Moving Average trend 
+- ETS (Error Trend Seasonal) decomposition
+- Moving Average trend
 
 ### Dataset
 * California housing price dataset
+
+
+### KaggleCompetition
+* Jane Market Prediction  - Xgboost prediction method.
