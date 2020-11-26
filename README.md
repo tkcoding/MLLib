@@ -44,3 +44,5 @@ Can you beat the agent in Tic-Tac-Toe game when it has completely master the gam
 
 ### KaggleCompetition
 * Jane Market Prediction  - Xgboost prediction method.
+26/11 Jane Street Market prediction added with grid_search and code to run xgboost in GPU. Results in prediction on true positive (buy)
+is low, could further improve with grid search with hyper parameter tuning.
