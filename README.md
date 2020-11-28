@@ -41,6 +41,8 @@ Can you beat the agent in Tic-Tac-Toe game when it has completely master the gam
 ### Dataset
 * California housing price dataset
 
+### Deep Learning Basics
+* Pytorch basics on how to setup tensor for regression and classification.
 
 ### KaggleCompetition
 * Jane Market Prediction  - Xgboost prediction method.
