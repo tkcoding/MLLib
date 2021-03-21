@@ -56,4 +56,4 @@ is low, could further improve with grid search with hyper parameter tuning.
 * 2. Using dabl , data analysis baseline
 
 21/3
-* Shopee code league with address identification training using conditional random field pycrf-suite. Achieved top 20% among code league participants from Asia 1000+ teams.
+* Shopee code league with address extraction using conditional random field pycrf-suite. Achieved top 20% among code league participants from Asia 1000+ teams.
