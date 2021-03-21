@@ -52,5 +52,8 @@ is low, could further improve with grid search with hyper parameter tuning.
 29/11 Jane Street Market with full data processed get scores of 100 using partial tuned model with subsample data. Require to further explore on the feature to improve on the time series analysis.
 
 12/12
-* 1. Jane Market to analyze feature through looking at tagging map 
+* 1. Jane Market to analyze feature through looking at tagging map
 * 2. Using dabl , data analysis baseline
+
+21/3
+* Shopee code league with address identification training using conditional random field pycrf-suite. Achieved top 20% among code league participants from Asia 1000+ teams.
