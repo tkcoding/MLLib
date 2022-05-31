@@ -1,0 +1,1 @@
+python IDEC.py others --custom_path data/UEFA_last_10_actions.csv --n_cluster 20

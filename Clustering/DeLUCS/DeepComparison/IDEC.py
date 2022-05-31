@@ -196,6 +196,7 @@ if __name__ == "__main__":
     # setting the hyper parameters
     import argparse
     import pandas as pd
+    fitting = False # Fitting is false then it will retrain the weight
     parser = argparse.ArgumentParser(description='train',
                                      formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('dataset', default='mnist', choices=['mnist', 'usps', 'reutersidf10k', 'pendigits', 'cgr','others'])
@@ -238,22 +239,26 @@ if __name__ == "__main__":
     # plot_model(idec.model, to_file='idec_model.png', show_shapes=True)
     # idec.model.summary()
 
-    t0 = time()
 
-    #  Pretrain autoencoders before clustering
-    # if args.ae_weights is None:
-    #     idec.pretrain(x, batch_size=args.batch_size, epochs=args.pretrain_epochs, optimizer=optimizer)
+    if fitting:
+        idec.load_weights(r'C:\Users\User\Desktop\GithubCode\MLLib\Clustering\DeLUCS\DeepComparison\results\idec\IDEC_model_final.h5')
+        y_pred = idec.predict_clusters(x)
+        pd.DataFrame(y_pred).to_csv('prediction_results.csv')
+    else:
+        t0 = time()
 
-    # begin clustering, time not include pretraining part.
-    idec.load_weights(r'C:\Users\User\Desktop\GithubCode\MLLib\Clustering\DeLUCS\DeepComparison\results\idec\IDEC_model_final.h5')
-    y_pred = idec.predict_clusters(x)
-    pd.DataFrame(y_pred).to_csv('prediction_results.csv')
-    # idec.compile(loss=['kld', 'mse'], loss_weights=[args.gamma, 1], optimizer=optimizer)
-    # idec.fit(x, y=None, batch_size=args.batch_size, tol=args.tol, maxiter=args.maxiter,
-    #          update_interval=args.update_interval, ae_weights=args.ae_weights, save_dir=args.save_dir)
+        #  Pretrain autoencoders before clustering
+        if args.ae_weights is None:
+            idec.pretrain(x, batch_size=args.batch_size, epochs=args.pretrain_epochs, optimizer=optimizer)
 
-    # # # Show the final results
-    # y_pred = idec.y_pred
-    # # print('acc:', cluster_acc(y, y_pred))
-    # pd.DataFrame(y_pred).to_csv('prediction_results.csv')
-    # print('clustering time: %d seconds.' % int(time() - t0))
+        # begin clustering, time not include pretraining part.
+
+        idec.compile(loss=['kld', 'mse'], loss_weights=[args.gamma, 1], optimizer=optimizer)
+        idec.fit(x, y=None, batch_size=args.batch_size, tol=args.tol, maxiter=args.maxiter,
+                update_interval=args.update_interval, ae_weights=args.ae_weights, save_dir=args.save_dir)
+
+        # # # Show the final results
+        y_pred = idec.y_pred
+        # print('acc:', cluster_acc(y, y_pred))
+        pd.DataFrame(y_pred).to_csv('prediction_results.csv')
+        print('clustering time: %d seconds.' % int(time() - t0))
